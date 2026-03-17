@@ -222,31 +222,31 @@
       <tr>
         <td><img src="https://placebear.com/50/50" alt=""></td>
         <td> orso </td>
-        <td> animale </td>
+        <td> 1 </td>
         <td> 10€ </td>
       </tr>
       <tr>
         <td><img src="https://placebear.com/50/50" alt=""></td>
         <td> orso </td>
-        <td> animale </td>
+        <td> 1 </td>
         <td> 10€ </td>
       </tr>
       <tr>
         <td><img src="https://placebear.com/50/50" alt=""></td>
         <td> orso </td>
-        <td> animale </td>
+        <td> 1 </td>
         <td> 10€ </td>
       </tr>
       <tr>
         <td><img src="https://placebear.com/50/50" alt=""></td>
         <td> orso </td>
-        <td> animale </td>
+        <td> 1 </td>
         <td> 10€ </td>
       </tr>
       <tr>
         <td><img src="https://placebear.com/50/50" alt=""></td>
         <td> orso </td>
-        <td> animale </td>
+        <td> 1 </td>
         <td> 10€ </td>
       </tr>
     </table>`
@@ -258,7 +258,18 @@
        Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
     */
 
-      const addRow = function () {}
+      const addRow = function (img, nome, quantità, prezzo) {
+        document.querySelector("#tableArea table").innerHTML += `
+      <tr>
+        <td><img src="${img}" alt="${nome}"></td>
+        <td> ${nome} </td>
+        <td> ${quantità} </td>
+        <td> ${prezzo}</td>
+      </tr>
+    `
+      }
+
+      addRow("https://placedog.net/50/50", "cane", "1", "5€")
 
       /* ESERCIZIO 14
       Crea una funzione che nasconda le immagini della tabella quando eseguita
@@ -277,7 +288,7 @@
           ].innerHTML = ""
       }
 
-      hideAllImages()
+      // hideAllImages()
 
       /* EXTRA ESERCIZIO 15
       Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
